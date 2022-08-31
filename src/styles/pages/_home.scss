@@ -1,0 +1,116 @@
+.home {
+  header {
+    width: 100%;
+    height: 100vh;
+    background: rgb(246, 248, 250);
+    // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    overflow: hidden;
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+
+      .scroll-indicator {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        bottom: 45px;
+        left: 50%;
+        transform: translate(-50%);
+        background: rgb(255, 255, 255);
+        @include glass-effect-1;
+        border-radius: 150px;
+        @include simple-center;
+
+        i {
+          font-size: 1.5rem;
+          animation: scrollDown infinite 1s linear alternate;
+          padding-bottom: 10px;
+        }
+
+        @keyframes scrollDown {
+          40% {
+            transform: translateY(5px);
+          }
+
+          100% {
+            transform: translate(0);
+          }
+        }
+      }
+
+      .content {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        // box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
+        padding: 20px;
+        border-radius: 30px;
+        @include glass-effect-2;
+        @include simple-center;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        h1 {
+          font-family: $font-3;
+          font-size: 2.5rem;
+          color: rgb(6, 192, 221);
+
+          span {
+            display: block;
+            font-family: $font-1;
+            color: rgba(20, 19, 19, 0.922);
+            font-size: 2rem;
+          }
+        }
+
+        .type-writer {
+          margin: 8px auto;
+          width: 530px;
+
+          span {
+            font-family: $font-1;
+            font-size: 1.2rem;
+            text-align: left;
+          }
+        }
+
+        .contact-btn {
+          min-width: 100px;
+          width: 180px;
+          max-width: 200px;
+          margin: 20px auto;
+          border: 1px solid rgb(0, 174, 255);
+          border-radius: 20px;
+          transition: 0.5s ease-in-out;
+
+          &:hover {
+            color: white;
+            background: rgb(0, 174, 255);
+            ;
+          }
+
+          .link {
+            display: block;
+            padding: 10px 20px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .skills {
+    .navigation {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.social-network {
+  display: flex;
+  justify-content: flex-end;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    width: 100px;
+    display: flex;
+
+    a {
+      padding: 5px;
+      transition: 0.5s ease-in-out;
+
+      &:hover i {
+        color: rgb(98, 97, 97);
+      }
+
+      i {
+        font-size: 1.4rem;
+        color: rgb(34, 34, 34);
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+}

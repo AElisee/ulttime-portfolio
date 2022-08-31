@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../assets/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+}
+
+$font-1: Poppins-Light;
+$font-2: Poppins-Medium;
+$font-3: Poppins-SemiBold;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-3;
+  font-size: 16px;
+  background: rgb(235, 235, 238);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+@mixin simple-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+// glass effect mixin
+@mixin glass-effect-1 {
+  background: linear-gradient(135deg,
+      rgba(252, 252, 252, 0.202),
+      rgba(241, 245, 246, 0));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
+  border: 2px solid rgba(255, 255, 255);
+  border-radius: 5px;
+}
+
+@mixin glass-effect-2 {
+  background: linear-gradient(135deg,
+      rgba(252, 252, 252, 0.202),
+      rgba(241, 245, 246, 0));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
+  border-top: 3px solid rgb(255, 255, 255);
+  border-left: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+@mixin skill-glass-effect {
+  background: linear-gradient(135deg,
+      rgba(252, 252, 252, 0.202),
+      rgba(241, 245, 246, 0));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 7px 0 rgba(193, 192, 192, 0.259);
+  border-top: 3px solid rgb(255, 255, 255);
+  border-left: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.section-title {
+  font-family: $font-3;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
