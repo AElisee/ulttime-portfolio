@@ -1,8 +1,10 @@
 .navigation {
+  position: fixed;
+  top: 0;
   width: 100%;
   min-width: 350px;
   height: 60px;
-  position: fixed;
+  background: rgb(246, 248, 250);
   z-index: 2000;
 
 

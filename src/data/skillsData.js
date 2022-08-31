@@ -13,7 +13,7 @@ export const skills = {
       icon: "./icons/js.svg",
     },
     {
-      name: "ReactJs & redux",
+      name: "ReactJs & Redux",
       icon: "./icons/react.png",
       icon_2: "./icons/redux.svg",
     },
