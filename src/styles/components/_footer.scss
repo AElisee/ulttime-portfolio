@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  height: 50px;
+  @include simple-center;
+  color: $color-4;
+  letter-spacing: 1px;
+  font-family: $font-1;
+  font-size: 1rem;
+
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+}

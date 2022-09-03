@@ -14,12 +14,12 @@
       transition: 0.5s ease-in-out;
 
       &:hover i {
-        color: rgb(98, 97, 97);
+        color: $color-1;
       }
 
       i {
         font-size: 1.4rem;
-        color: rgb(34, 34, 34);
+        color: rgb(255, 255, 255);
         transition: 0.5s ease-in-out;
       }
     }

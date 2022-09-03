@@ -1,5 +1,6 @@
 .skills {
-  background: white;
+  position: relative;
+  background: $color-3;
   min-height: 100vh;
   padding: 65px 0;
 
@@ -13,8 +14,9 @@
 
     .text-content {
       p {
+        color: $color-4;
         font-family: $font-2;
-        font-size: 1.08rem;
+        font-size: 1.2rem;
         margin-bottom: 48px;
       }
     }
@@ -27,20 +29,24 @@
 
       .card-1 {
         flex: 1 0 16%;
-        min-width: 110px;
-        width: 110px;
+        min-width: 130px;
+        width: 130px;
         max-width: 130px;
-        height: 90px;
+        height: 120px;
         margin: 10px;
         padding: 5px;
-        @include skill-glass-effect;
-        border-top: 1px solid #4facfe;
-        border-left: 1px solid #4facfe;
+        border-radius: 7px;
+        background: inherit;
+        border: 1px solid $color-4;
+        font-family: $font-2;
+        color: $color-4;
+        letter-spacing: 1.5px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.961);
         @include simple-center;
 
-        &:hover {
-          border-bottom: 3px solid #4facfe;
-        }
+        &:hover {}
+
+
 
         .container {
           width: 100%;
@@ -77,16 +83,20 @@
         min-width: 110px;
         width: 130px;
         max-width: 150px;
-        height: 60px;
+        height: 70px;
         margin: 8px;
         padding: 5px;
-        @include skill-glass-effect;
-        border-top: 1px solid rgb(114, 250, 198);
-        border-left: 1px solid rgb(114, 250, 198);
+        border-radius: 7px;
+        background-color: white;
+        color: $color-1;
+        letter-spacing: 1.5px;
+        font-family: $font-2;
+        border-top: 1px solid $color-2;
+        border-left: 1px solid $color-2;
         @include simple-center;
 
         &:hover {
-          border-bottom: 3px solid rgb(114, 250, 198);
+          border-bottom: 3px solid $color-3;
         }
 
         .container {

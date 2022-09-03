@@ -9,13 +9,22 @@
 }
 
 @font-face {
-  font-family: "Poppins-SemiBold";
-  src: url(../assets/fonts/Poppins-SemiBold.ttf);
+  font-family: "Righteous";
+  src: url(../assets/fonts/Righteous-Regular.ttf);
 }
 
 $font-1: Poppins-Light;
 $font-2: Poppins-Medium;
-$font-3: Poppins-SemiBold;
+$font-3: Righteous;
+
+// $color-0: rgb(250, 254, 255);
+// $color-0: rgb(224, 238, 242);
+$color-0:rgb(26, 43, 91);
+// $color-1: rgb(6, 192, 221);
+$color-1: rgb(7, 11, 38);
+$color-2:rgb(2, 55, 111);
+$color-3: rgb(11, 17, 44);
+$color-4:#d4d4d4;
 
 * {
   margin: 0;
@@ -23,10 +32,14 @@ $font-3: Poppins-SemiBold;
   box-sizing: border-box;
 }
 
+html {}
+
 body {
   font-family: $font-3;
   font-size: 16px;
-  background: rgb(235, 235, 238);
+  background: $color-0;
+  height: 100%;
+
 }
 
 ul {
@@ -87,4 +100,13 @@ a:visited {
   font-family: $font-3;
   font-size: 2rem;
   margin-bottom: 18px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.link {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: none;
+  color: white !important;
 }

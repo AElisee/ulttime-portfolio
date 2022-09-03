@@ -1,9 +1,11 @@
 .home {
   header {
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(246, 248, 250);
-    // background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    max-height: 100vh;
+    background: $color-0;
     overflow: hidden;
 
     .header-container {
@@ -15,35 +17,6 @@
       margin: 0 auto;
       position: relative;
 
-      .scroll-indicator {
-        position: absolute;
-        width: 70px;
-        height: 70px;
-        bottom: -20px;
-        left: 50%;
-        transform: translate(-50%);
-        background: rgb(255, 255, 255);
-        @include glass-effect-1;
-        border-radius: 150px;
-        @include simple-center;
-
-        i {
-          font-size: 1.5rem;
-          animation: scrollDown infinite 1s linear alternate;
-          padding-bottom: 10px;
-        }
-
-        @keyframes scrollDown {
-          40% {
-            transform: translateY(5px);
-          }
-
-          100% {
-            transform: translate(0);
-          }
-        }
-      }
-
       .content {
         width: 100%;
         max-width: 700px;
@@ -51,7 +24,7 @@
         // box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
         padding: 20px;
         border-radius: 30px;
-        @include glass-effect-2;
+        // @include glass-effect-2;
         @include simple-center;
 
         @media screen and (max-width: 768px) {
@@ -64,72 +37,85 @@
 
           h1 {
             font-family: $font-2;
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 1.7rem;
+            font-weight: 400;
             color: rgb(6, 192, 221);
-            letter-spacing: -1px;
+            letter-spacing: 0.5px;
 
-            @media screen and (max-width: 500px) {
-              font-size: 1.5rem;
+            @media screen and (max-width: 768px) {
+              font-size: 1.2rem;
             }
 
             span {
               display: block;
-              font-family: $font-1;
-              color: rgba(20, 19, 19, 0.922);
-              font-size: 1.7rem;
+              font-family: $font-3;
+              color: white;
+              font-weight: 700;
+              font-size: 2.5rem;
               margin-bottom: 10px;
 
-              @media screen and (max-width: 500px) {
-                font-size: 1.2rem;
+              @media screen and (max-width: 768px) {
+                font-size: 1.5rem;
               }
             }
           }
 
-          .type-writer {
+          .desc {
             width: 100%;
-            padding: 20px;
+            margin: 10px auto;
 
             span {
+              color: $color-4;
               font-family: $font-1;
-              font-size: 1rem;
-              text-align: left;
+              font-size: 1.2rem;
+              font-weight: 700;
+              font-style: italic;
+              text-align: center;
             }
           }
 
           .contact-btn {
-            min-width: 100px;
-            width: 180px;
-            max-width: 200px;
-            margin: 20px auto 0;
-            border: 1px solid rgb(0, 174, 255);
-            border-radius: 10px;
-            transition: 0.5s ease-in-out;
-
-            &:hover {
-              color: white;
-              background: rgb(0, 174, 255);
-              ;
-            }
-
-            .link {
-              display: block;
-              padding: 9px 18px;
-
-              @media screen and (max-width: 550px) {
-                font-size: 0.9rem;
-                padding: 7px 14px;
-              }
-            }
+            margin-top: 40px;
           }
         }
       }
 
+      .scroll-indicator {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%);
+        background: rgb(255, 255, 255);
+        // @include glass-effect-1;
+        border-radius: 150px;
+        @include simple-center;
+
+        i {
+          font-size: 1.5rem;
+          animation: scrollDown infinite 1s linear alternate;
+          padding-bottom: 10px;
+          color: $color-1;
+        }
+
+        @keyframes scrollDown {
+          40% {
+            transform: translateY(5px);
+          }
+
+          100% {
+            transform: translate(0);
+          }
+        }
+      }
     }
   }
 
-  .skills {
-    .navigation {
+  .section-container {
+
+    .navigation,
+    .footer {
       display: none;
     }
   }

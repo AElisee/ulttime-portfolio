@@ -1,11 +1,15 @@
 import React from "react";
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
 const Projects = () => {
   return (
-    <div className="projects">
-      <Navigation />
-      <h1>projects</h1>
+    <div className="section-container">
+      <div className="projects">
+        <Navigation />
+        <h3 className="section-title">projects</h3>
+      </div>
+      <Footer />
     </div>
   );
 };

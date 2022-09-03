@@ -5,38 +5,31 @@ import SocialNetwork from "./SocialNetwork";
 
 const Navigation = () => {
   const [isClose, setIsClose] = useState(true);
+
   return (
     <div className="navigation">
       <div>
         <nav>
           <div
+            className="menu"
             onClick={() => {
               setIsClose(false);
             }}
           >
-            <img
-              src="./icons/menu-2.svg"
-              alt="menu-icon"
-              className="menu-burger"
-            />
-            <span>Ange Kouassi</span>
+            <div className="menu-burger">
+              <i className="fa-solid fa-bars"></i>
+            </div>
+
+            <span>Ange</span>
           </div>
           <SocialNetwork />
         </nav>
-        <ul className={`sideNav ${!isClose ? "sideNav-close" : ""}`}>
+        <ul className={`sideNav ${isClose === false ? "sideNav-close" : ""}`}>
           <li className="sideNav-header">
             <div className="content">
               <h3>Ange Elisée Kouassi</h3>
               <h5>développeur front-end | reactJs</h5>
             </div>
-            <img
-              src="./icons/square-x.svg"
-              alt="square-x_icon"
-              onClick={() => {
-                setIsClose(true);
-              }}
-              className="square-x"
-            />
           </li>
           <li>
             <NavLink
@@ -45,6 +38,15 @@ const Navigation = () => {
             >
               <img src="./icons/home-2.svg" alt="home-icon" />
               <span>Accueil</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/je_suis"
+              className={(nav) => (nav.isActive ? "nav-active" : null)}
+            >
+              <img src="./icons/file-text.svg" alt="file-text-icon" />
+              <span>A propos</span>
             </NavLink>
           </li>
           <li>
@@ -74,15 +76,14 @@ const Navigation = () => {
               <span>Contacts</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/mon-cv"
-              className={(nav) => (nav.isActive ? "nav-active" : null)}
-            >
-              <img src="./icons/file-text.svg" alt="file-text-icon" />
-              <span>Mon CV</span>
-            </NavLink>
-          </li>
+          <div
+            className="close-area"
+            onClick={() => {
+              setIsClose(true);
+            }}
+          >
+            <img src="./icons/square-x.svg" alt="square-x_icon" />
+          </div>
         </ul>
       </div>
     </div>

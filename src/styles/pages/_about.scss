@@ -1,0 +1,140 @@
+.about {
+  position: relative;
+  background: $color-3;
+  min-height: 100vh;
+  padding: 65px 0;
+
+  .about-container {
+    width: 1100px;
+    max-width: 90%;
+    min-height: 100%;
+    margin: 35px auto;
+
+    .about-modal {
+      position: relative;
+      width: 85%;
+      max-width: 900px;
+      border-radius: 10px;
+      border: 1px solid $color-4;
+      margin: 65px auto;
+
+
+      .header-btn {
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        button {
+          background: none;
+          padding: 5px 0;
+          margin: 0 5px;
+          position: relative;
+          border: none;
+          font-family: $font-2;
+          font-size: 1rem;
+          color: $color-4;
+          opacity: 0.7;
+
+
+
+        }
+
+        button.btn-active {
+          color: white;
+          opacity: 1;
+
+          &::after {
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            position: absolute;
+            content: "";
+            width: 90%;
+            height: 2px;
+            border-radius: 2px;
+            background: red;
+            transition: 1.2s ease-in-out;
+          }
+        }
+      }
+
+      .presentation {
+        margin: 20px;
+        font-family: $font-2;
+        font-size: 1.1rem;
+        color: $color-4;
+
+        .content {
+          .formations {
+            display: block;
+            padding: 20px 0;
+          }
+
+          span {
+            display: block;
+          }
+
+        }
+      }
+
+      .donwload-cv {
+        width: 100%;
+        @include simple-center;
+        padding: 20px 0 40px;
+      }
+
+      .statut {
+        padding: 30px;
+        @include simple-center;
+        font-family: $font-2;
+        color: white;
+        font-size: 1.1rem;
+
+        .statut-container {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          gap: 10px;
+
+          span {
+            text-align: left;
+            color: yellow;
+          }
+
+          p {
+            font-family: $font-1;
+            font-size: 1rem;
+          }
+
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+          }
+
+          .left-part {
+            @include simple-center;
+
+            @media screen and (max-width: 768px) {
+              margin-bottom: 30px;
+            }
+
+            span {
+              display: block;
+              padding-bottom: 7px;
+
+            }
+          }
+
+          .right-part {
+            >div {
+              display: grid;
+              grid-template-columns: 35% 65%;
+              padding-bottom: 5px;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

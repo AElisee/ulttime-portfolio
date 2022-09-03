@@ -1,0 +1,27 @@
+.contacts {
+  position: relative;
+  background: $color-3;
+  padding: 65px 0;
+  min-height: 100vh;
+
+  .contacts-container {
+    // width: 1100px;
+    // max-width: 90%;
+    // margin: 35px auto;
+    width: 100%;
+    min-height: 100%;
+
+    .form-map {
+      display: grid;
+      grid-template-columns: 58% 42%;
+
+      .form {}
+
+      .map {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 7px 0 0 7px;
+      }
+    }
+  }
+}

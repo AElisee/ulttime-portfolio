@@ -1,8 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Card1 = ({ skill }) => {
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: -100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+    },
+  };
   return (
-    <div className="card-1">
+    <motion.div
+      className="card-1"
+      initial="initial"
+      animate="visible"
+      exit="exit"
+      variants={variants}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.05, rotate: 2 }}
+    >
       <div className="container">
         <div className="icon-container">
           <img src={skill.icon} alt="" />
@@ -12,7 +35,7 @@ const Card1 = ({ skill }) => {
           <h4>{skill.name}</h4>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
