@@ -39,31 +39,36 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Contactez nous</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit
+      </p>
       <form ref={form} onSubmit={sendEmail} className="form-content">
         <div className="name-conatainer">
-          {/* name icon */}
+          <img src="./icons/briefcase.svg" alt="person-icon" />
           <input
             type="text"
             name="name"
             required
             autoComplete="off"
             id="name"
+            placeholder="Votre nom"
+            autoFocus
           />
         </div>
         <div className="email-container">
-          {/* email icon */}
+          <img src="./icons/briefcase.svg" alt="email-icon" />
           <input
             type="email"
             name="email"
             required
             autoComplete="off"
             id="email"
+            placeholder="Votre adresse mail"
           />
         </div>
         <div className="message-container">
           {/* message icon */}
-          <textarea name="message" id="mess" />
+          <textarea name="message" id="mess" placeholder="Message..." />
         </div>
         <div className="submit-container">
           {/* submit icon */}
@@ -71,6 +76,10 @@ const ContactForm = () => {
         </div>
       </form>
       <div className="formMessage"></div>
+      <div className="tel-mail">
+        <p>2kange.eli@gmail.com</p>
+        <p>+225 07 891 413 81</p>
+      </div>
     </div>
   );
 };
