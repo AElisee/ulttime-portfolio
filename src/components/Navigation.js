@@ -41,7 +41,15 @@ const Navigation = () => {
             </div>
             <div className="profile">
               <div className="profile-container">
-                <div className="profile-picture"></div>
+                <div
+                  className="profile-picture"
+                  style={{
+                    background: "url(./id.jpg)",
+                    backgroundPosition: "top",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                ></div>
                 <h3>Ange Elisée Kouassi</h3>
                 <h5>Développeur Front-end</h5>
               </div>
