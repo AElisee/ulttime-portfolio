@@ -11,9 +11,10 @@ const Presentaton = () => {
         </p>
 
         <p className="formations">
-          J’ai aussi participé à des formations en développement d’application
-          web et mobile, au cours desquelles nous avons dévéloppé des
-          applications et sites web de bout en bout. Parmi elles:
+          J’ai également participé à des formations certifiantes en
+          développement d’application web et mobile, au cours desquelles nous
+          avons dévéloppé des applications et sites web de bout en bout. Parmi
+          elles:
           <span>
             one week more skills à Orange digital academy | Novembre 2021
           </span>
@@ -25,10 +26,10 @@ const Presentaton = () => {
 
         <p>
           Depuis Avril 2022 je me suis appliqué au développement web, front-end,
-          à travers des boot camps fullstack js qui m'ont amméné à faire du
+          à travers des bootcamps fullstack js qui m'ont amméné à faire du
           développement front-end ma passion. <br /> Je vous invite à visiter
           l'onglet <em style={{ color: "blue" }}>statut</em> pour voir mon
-          statut de travail à ce jour, et me contacter si vous voulez travailler
+          statut de travail à actuel, et me contacter si vous voulez travailler
           avec moi sur un projet, me propser un stage ou m'employer...
         </p>
       </div>

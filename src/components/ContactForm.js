@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import SocialNetwork from "./SocialNetwork";
 
 const ContactForm = () => {
   const form = useRef();
@@ -23,7 +24,7 @@ const ContactForm = () => {
 
           setTimeout(() => {
             formMes.innerHTML = "";
-          }, 2500);
+          }, 3000);
         },
         (error) => {
           // console.log(error.text);
@@ -32,7 +33,7 @@ const ContactForm = () => {
 
           setTimeout(() => {
             formMes.innerHTML = "";
-          }, 2500);
+          }, 3000);
         }
       );
   };
@@ -40,11 +41,12 @@ const ContactForm = () => {
   return (
     <div className="form-container">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit
+        N'hesitez pas à me contactez pour des propositions d'emploi ou me dire
+        Bonjour !
       </p>
       <form ref={form} onSubmit={sendEmail} className="form-content">
         <div className="name-conatainer">
-          <img src="./icons/briefcase.svg" alt="person-icon" />
+          <img src="./icons/user.svg" alt="person-icon" />
           <input
             type="text"
             name="name"
@@ -52,11 +54,10 @@ const ContactForm = () => {
             autoComplete="off"
             id="name"
             placeholder="Votre nom"
-            autoFocus
           />
         </div>
         <div className="email-container">
-          <img src="./icons/briefcase.svg" alt="email-icon" />
+          <img src="./icons/mail.svg" alt="email-icon" />
           <input
             type="email"
             name="email"
@@ -67,11 +68,9 @@ const ContactForm = () => {
           />
         </div>
         <div className="message-container">
-          {/* message icon */}
-          <textarea name="message" id="mess" placeholder="Message..." />
+          <textarea name="message" id="mess" placeholder="Votre message..." />
         </div>
         <div className="submit-container">
-          {/* submit icon */}
           <input type="submit" value="Envoyer" className="submit-btn" />
         </div>
       </form>
@@ -80,6 +79,7 @@ const ContactForm = () => {
         <p>2kange.eli@gmail.com</p>
         <p>+225 07 891 413 81</p>
       </div>
+      <SocialNetwork />
     </div>
   );
 };

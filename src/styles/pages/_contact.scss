@@ -17,13 +17,17 @@
     display: grid;
     grid-template-columns: 58% 42%;
 
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
     .form {
       width: 100%;
       @include simple-center;
-
+      align-items: flex-start;
 
       .form-container {
-        width: 70%;
+        width: 72%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
@@ -31,7 +35,7 @@
 
         >p {
           text-align: justify;
-          // width: 71%;
+          width: 85%;
           margin: 0 auto;
           color: rgba(255, 255, 255, 0.549);
           font-family: $font-2;
@@ -39,7 +43,7 @@
         }
 
         form {
-          padding-top: 35px;
+          padding-top: 20px;
           color: rgba(255, 255, 255, 0.753);
 
           div {
@@ -112,6 +116,36 @@
             padding: 3px;
           }
         }
+
+        .success,
+        .error {
+          background: #2b3045be;
+          padding: 5px 2px;
+          font-family: $font-1;
+          font-size: 0.8rem;
+          border-radius: 10px;
+          transition: 1.2s ease;
+        }
+
+        .success {
+          color: rgb(29, 246, 188);
+        }
+
+        .error {
+          color: rgba(241, 34, 34, 0.814);
+        }
+
+        .formMessage {
+          min-width: 200px;
+          width: 62%;
+          margin: 0 auto;
+          height: 20px;
+
+        }
+      }
+
+      .social-network {
+        @include simple-center;
       }
     }
 
@@ -119,6 +153,10 @@
       width: 100%;
       overflow: hidden;
       border-radius: 7px 0 0 7px;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 

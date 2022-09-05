@@ -17,18 +17,34 @@ const Navigation = () => {
             }}
           >
             <div className="menu-burger">
-              <i className="fa-solid fa-bars"></i>
+              <img
+                src="./icons/align-justified.svg"
+                alt="align-justified-icon"
+                className="open-close"
+              />
             </div>
-
             <span>Ange</span>
           </div>
           <SocialNetwork />
         </nav>
         <ul className={`sideNav ${isClose === false ? "sideNav-close" : ""}`}>
           <li className="sideNav-header">
-            <div className="content">
-              <h3>Ange Elisée Kouassi</h3>
-              <h5>développeur front-end | reactJs</h5>
+            <div className="c-menu">
+              <div
+                className="close-icon"
+                onClick={() => {
+                  setIsClose(true);
+                }}
+              >
+                <img src="./icons/caret-left.svg" alt="" />
+              </div>
+            </div>
+            <div className="profile">
+              <div className="profile-container">
+                <div className="profile-picture"></div>
+                <h3>Ange Elisée Kouassi</h3>
+                <h5>Développeur Front-end</h5>
+              </div>
             </div>
           </li>
           <li>
@@ -54,7 +70,7 @@ const Navigation = () => {
               to="/competences"
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
-              <img src="./icons/tools.svg" alt="tool-icon" />
+              <img src="./icons/adjustments.svg" alt="tool-icon" />
               <span>Compétences</span>
             </NavLink>
           </li>
@@ -76,14 +92,6 @@ const Navigation = () => {
               <span>Contacts</span>
             </NavLink>
           </li>
-          <div
-            className="close-area"
-            onClick={() => {
-              setIsClose(true);
-            }}
-          >
-            <img src="./icons/square-x.svg" alt="square-x_icon" />
-          </div>
         </ul>
       </div>
     </div>

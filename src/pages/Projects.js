@@ -7,7 +7,9 @@ const Projects = () => {
     <div className="section-container">
       <div className="projects">
         <Navigation />
-        <h3 className="section-title">projects</h3>
+        <div className="projects-container">
+          <h3 className="section-title">projects</h3>
+        </div>
       </div>
       <Footer />
     </div>
