@@ -1,12 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { NavLink } from "react-router-dom";
 import SocialNetwork from "./SocialNetwork";
 
 const Navigation = () => {
   const [isClose, setIsClose] = useState(true);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  return (
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setShow(false);
+        setIsClose(true);
+      } else {
+        setShow(true);
+      }
+
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+  return show ? (
     <div className="navigation">
       <div>
         <nav>
@@ -29,27 +55,17 @@ const Navigation = () => {
         </nav>
         <ul className={`sideNav ${isClose === false ? "sideNav-close" : ""}`}>
           <li className="sideNav-header">
-            <div className="c-menu">
-              <div
-                className="close-icon"
-                onClick={() => {
-                  setIsClose(true);
-                }}
-              >
-                <img src="./icons/caret-left.svg" alt="" />
-              </div>
-            </div>
+            <span
+              className="close-icon"
+              onClick={() => {
+                setIsClose(true);
+              }}
+            >
+              <img src="./icons/caret-left.svg" alt="" />
+            </span>
+
             <div className="profile">
               <div className="profile-container">
-                <div
-                  className="profile-picture"
-                  style={{
-                    background: "url(./id.jpg)",
-                    backgroundPosition: "top",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                  }}
-                ></div>
                 <h3>Ange Elisée Kouassi</h3>
                 <h5>Développeur Front-end</h5>
               </div>
@@ -103,7 +119,7 @@ const Navigation = () => {
         </ul>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Navigation;

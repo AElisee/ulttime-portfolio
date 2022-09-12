@@ -1,16 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import BackgroundAnim from "./BackgroundAnim";
 import Navigation from "./Navigation";
 
 const Header = () => {
   return (
     <header>
+      <BackgroundAnim />
       <Navigation />
       <div className="header-container">
         <div className="content">
           <div>
             <h1>
-              <span>ANGE KOAUSSI</span> Développeur Web{" "}
+              <span>
+                Bienvenue ! <br /> Je suis Ange Kouassi
+              </span>{" "}
+              Développeur Web{" "}
             </h1>
             <div className="desc">
               <span>Développeur Front-end</span>
@@ -23,7 +28,7 @@ const Header = () => {
           </div>
         </div>
         <span className="scroll-indicator">
-          <i className="fa-solid fa-arrow-down"></i>
+          <img src="./icons/arrow-move-down.svg" alt="arrow-move-down" />
         </span>
       </div>
     </header>

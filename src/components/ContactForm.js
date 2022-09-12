@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import SocialNetwork from "./SocialNetwork";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 const ContactForm = () => {
   const form = useRef();
@@ -40,10 +41,6 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <p>
-        N'hesitez pas à me contactez pour des propositions d'emploi ou me dire
-        Bonjour !
-      </p>
       <form ref={form} onSubmit={sendEmail} className="form-content">
         <div className="name-conatainer">
           <img src="./icons/user.svg" alt="person-icon" />
@@ -75,9 +72,18 @@ const ContactForm = () => {
         </div>
       </form>
       <div className="formMessage"></div>
-      <div className="tel-mail">
-        <p>2kange.eli@gmail.com</p>
-        <p>+225 07 891 413 81</p>
+      <div className="address">
+        <p>Abidjan, Côte d'Ivoire</p>
+        <CopyToClipboard text="2kange.eli@gmail.com">
+          <p className="email" onClick={() => alert("Email copié")}>
+            2kange.eli@gmail.com
+          </p>
+        </CopyToClipboard>
+        <CopyToClipboard text="0789141381">
+          <p className="phone" onClick={() => alert("Téléphone copié")}>
+            +225 07 891 413 81
+          </p>
+        </CopyToClipboard>
       </div>
       <SocialNetwork />
     </div>

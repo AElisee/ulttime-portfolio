@@ -10,6 +10,12 @@ const Contact = () => {
         <Navigation />
         <div className="contacts-container">
           <h3 className="section-title">Contactez-moi !</h3>
+          <p>
+            Je suis ouvert aux <em>offres d'emploi</em> et <em>stages</em> en
+            dévéloppement web ou toutes colaborations dans le domaine des TIC.
+            <br /> N'hesitez pas à me contacter pour des suggestions ou me dire
+            Bonjour !
+          </p>
         </div>
         <div className="form-map">
           <div className="form">

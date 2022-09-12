@@ -24,11 +24,16 @@ const AboutModal = () => {
       <div className="donwload-cv">
         <a
           className="link"
-          href="https://exemple.com"
+          href="./css.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Télécharger CV
+          Télécharger CV{" "}
+          <img
+            src="./icons/file-text.svg"
+            alt=""
+            style={{ transform: "translateY(5px)", filter: "invert(100%)" }}
+          />
         </a>
       </div>
     </div>

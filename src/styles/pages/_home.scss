@@ -1,30 +1,31 @@
 .home {
   header {
+    position: relative;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
     max-height: 100vh;
-    background: $color-0;
+    background: $color-1;
     overflow: hidden;
+
 
     .header-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 90%;
+      max-width: 1100%;
       height: 100%;
       margin: 0 auto;
       position: relative;
 
       .content {
         width: 100%;
-        max-width: 700px;
+        // max-width: 85%;
+        text-align: center;
         margin: 0 auto;
-        // box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
         padding: 20px;
         border-radius: 30px;
-        // @include glass-effect-2;
         @include simple-center;
 
         @media screen and (max-width: 768px) {
@@ -33,29 +34,44 @@
 
         div {
           width: 100%;
-          text-align: center;
 
           h1 {
-            font-family: $font-2;
-            font-size: 1.7rem;
+            width: 100%;
+            max-width: max-content;
+            margin: 0 auto;
+            font-family: $font-1;
+            font-size: 1.9rem;
             font-weight: 400;
-            color: rgb(6, 192, 221);
+            color: $color-3;
             letter-spacing: 0.5px;
+            transition: 400ms ease-in-out;
+            z-index: 50;
+            position: relative;
 
             @media screen and (max-width: 768px) {
-              font-size: 1.2rem;
+              font-size: 1.4rem;
             }
 
             span {
               display: block;
-              font-family: $font-3;
+              font-family: $font-1;
               color: white;
+              font-weight: 900;
               font-weight: 700;
-              font-size: 2.5rem;
-              margin-bottom: 10px;
+              font-size: 4rem;
+              transition: 400ms ease-in-out;
+              z-index: 50;
+
+              @media screen and (max-width: 950px) {
+                font-size: 3rem;
+              }
 
               @media screen and (max-width: 768px) {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
+              }
+
+              @media screen and (max-width: 500px) {
+                font-size: 1.9rem;
               }
             }
           }
@@ -63,19 +79,29 @@
           .desc {
             width: 100%;
             margin: 10px auto;
+            z-index: 50;
+            position: relative;
 
             span {
               color: $color-4;
               font-family: $font-1;
               font-size: 1.2rem;
-              font-weight: 700;
+              font-weight: 30;
               font-style: italic;
               text-align: center;
+              transition: 400ms ease-in-out;
+
+              @media screen and (max-width: 768px) {
+                font-size: 1rem;
+              }
             }
           }
 
           .contact-btn {
             margin-top: 40px;
+            color: white;
+            z-index: 50;
+            position: relative;
           }
         }
       }
@@ -88,20 +114,26 @@
         left: 50%;
         transform: translate(-50%);
         background: rgb(255, 255, 255);
-        // @include glass-effect-1;
         border-radius: 150px;
         @include simple-center;
+        z-index: 50;
 
-        i {
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+
+        img {
           font-size: 1.5rem;
-          animation: scrollDown infinite 1s linear alternate;
           padding-bottom: 10px;
-          color: $color-1;
+          width: 45px;
+          height: 45px;
+          animation: scrollDown infinite 800ms linear alternate;
         }
 
         @keyframes scrollDown {
-          40% {
-            transform: translateY(5px);
+          60% {
+            transform: translateY(7px);
           }
 
           100% {
@@ -112,11 +144,53 @@
     }
   }
 
+  // cache la navigation et le footer des differentes sections lorsqu'on est sur l'accueil 
   .section-container {
 
     .navigation,
     .footer {
       display: none;
     }
+  }
+
+  // to top button style
+  #toTopBtn {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,
+        0,
+        0,
+        0.363);
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 600;
+    @include simple-center;
+
+    &:hover {
+      background: $color-4;
+      border: 4px solid white;
+    }
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .contacts {
+    padding: 30px 0;
   }
 }

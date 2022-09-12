@@ -1,8 +1,40 @@
 .skills {
   position: relative;
-  background: $color-3;
   min-height: 100vh;
   padding: 65px 0;
+  background: $color-2;
+  z-index: 10;
+  overflow: hidden;
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: -390px;
+  //   left: -12%;
+  //   width: 100%;
+  //   height: 400px;
+  //   background: linear-gradient(to bottom, rgb(237,
+  //         130,
+  //         130) 34%, rgb(210, 2, 54) 100%);
+  //   transform: rotate(-2deg);
+  //   z-index: 0;
+  //   border-radius: 50px;
+  // }
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: -390px;
+  //   right: -12%;
+  //   width: 100%;
+  //   height: 400px;
+  //   background: linear-gradient(to bottom, rgb(237,
+  //         130,
+  //         130) 34%, rgb(210, 2, 54) 100%);
+  //   transform: rotate(2deg);
+  //   z-index: 0;
+  //   border-radius: 50px;
+  // }
 
 
   .skills-container {
@@ -11,6 +43,10 @@
     max-width: 90%;
     margin: 0 auto;
     @include simple-center;
+    z-index: 10;
+    position: relative;
+
+    @include maxWidth-768;
 
     .text-content {
       p {
@@ -21,6 +57,68 @@
       }
     }
 
+    .skill-level {
+      margin-bottom: 20px;
+
+      div {
+        h3 {
+          padding: 10px 0;
+          color: $color-3;
+          font-weight: 100;
+
+          @media screen and (max-width: 600px) {
+            font-size: 1rem;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin: 0 auto;
+
+          li {
+            width: 50%;
+            margin: 5px 0;
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 768px) {
+              width: 85%;
+            }
+
+            @media screen and (max-width: 600px) {
+              width: 97%;
+            }
+
+            h4 {
+              color: white;
+              font-weight: 100;
+              text-transform: uppercase;
+            }
+
+            .progress-bar {
+              width: 100%;
+              height: 6px;
+              background: rgb(245, 239, 239);
+              // background: rgb(247, 157, 13);
+              border-radius: 5px;
+              position: relative;
+
+              span {
+                position: absolute;
+                height: 100%;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .skills-content {
       display: flex;
       flex-wrap: wrap;
@@ -28,23 +126,26 @@
       padding: 20px 0;
 
       .card-1 {
-        flex: 1 0 16%;
-        min-width: 130px;
-        width: 130px;
-        max-width: 130px;
-        height: 120px;
-        margin: 10px;
+        flex: 1 0 20%;
+        min-width: 140px;
+        width: 140px;
+        max-width: 160px;
+        height: 140px;
+        margin: 8px;
         padding: 5px;
-        border-radius: 7px;
+        border-radius: 3px;
         background: inherit;
-        border: 1px solid $color-4;
         font-family: $font-2;
-        color: $color-4;
+        color: whitesmoke;
         letter-spacing: 1.5px;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.961);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.761);
         @include simple-center;
+        transition: 400ms ease-in-out;
 
-        &:hover {}
+        &:hover {
+          border: 1px solid rgb(32, 128, 227);
+          box-shadow: 0 0px 10px rgba(32, 129, 227, 0.7);
+        }
 
 
 
@@ -74,45 +175,17 @@
             text-align: center;
             line-height: 18px;
             padding: 5px;
+            font-family: $font-1;
           }
         }
       }
 
-      .card-2 {
-        flex: 1 0 16%;
-        min-width: 110px;
-        width: 130px;
-        max-width: 150px;
-        height: 70px;
-        margin: 8px;
-        padding: 5px;
-        border-radius: 7px;
-        background-color: white;
-        color: $color-1;
-        letter-spacing: 1.5px;
-        font-family: $font-2;
-        border-top: 1px solid $color-2;
-        border-left: 1px solid $color-2;
-        @include simple-center;
+      .card-1:nth-child(2n) {
+        border-bottom: 1px solid $color-3;
+      }
 
-        &:hover {
-          border-bottom: 3px solid $color-3;
-        }
-
-        .container {
-          width: 100%;
-          height: 100%;
-          padding: 0;
-
-          .skill-name {
-            width: 100%;
-            height: 100%;
-            @include simple-center;
-            padding-bottom: 5px;
-            text-align: center;
-            line-height: 18px;
-          }
-        }
+      .card-1:nth-child(2n+1) {
+        border-top: 1px solid $color-3;
       }
     }
   }

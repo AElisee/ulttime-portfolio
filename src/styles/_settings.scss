@@ -8,23 +8,16 @@
   src: url(../assets/fonts/Poppins-Medium.ttf);
 }
 
-@font-face {
-  font-family: "Righteous";
-  src: url(../assets/fonts/Righteous-Regular.ttf);
-}
-
 $font-1: Poppins-Light;
 $font-2: Poppins-Medium;
-$font-3: Righteous;
 
-// $color-0: rgb(250, 254, 255);
-// $color-0: rgb(224, 238, 242);
-$color-0:rgb(26, 43, 91);
-// $color-1: rgb(6, 192, 221);
-$color-1: rgb(7, 11, 38);
-$color-2:rgb(2, 55, 111);
-$color-3: rgb(11, 17, 44);
-$color-4:#d4d4d4;
+$color-1:rgba(21, 24, 42, 0.828);
+$color-2: rgb(21, 25, 43);
+// $color-2: rgb(243, 246, 221);
+$color-3: #32d8e5;
+$color-4:rgb(245, 239, 239);
+
+
 
 * {
   margin: 0;
@@ -33,16 +26,15 @@ $color-4:#d4d4d4;
 }
 
 html {
-  min-height: -webkit-fill-available;
+  scroll-behavior: smooth;
+
 }
 
 body {
-  font-family: $font-3;
+  background: $color-2 !important;
+  overscroll-behavior: none;
+  font-family: $font-2;
   font-size: 16px;
-  background: $color-0;
-  min-height: 100%;
-  min-height: -webkit-fill-available;
-
 }
 
 ul {
@@ -63,16 +55,14 @@ a:visited {
 
 }
 
-// glass effect mixin
-@mixin glass-effect-1 {
-  background: linear-gradient(135deg,
-      rgba(252, 252, 252, 0.202),
-      rgba(241, 245, 246, 0));
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px 0 rgba(193, 192, 192, 0.259);
-  border: 2px solid rgba(255, 255, 255);
-  border-radius: 5px;
+// media queries max-width 768
+
+@mixin maxWidth-768 {
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 97%;
+
+  }
 }
 
 @mixin glass-effect-2 {
@@ -87,29 +77,41 @@ a:visited {
   border-radius: 20px;
 }
 
-@mixin skill-glass-effect {
-  background: linear-gradient(135deg,
-      rgba(252, 252, 252, 0.202),
-      rgba(241, 245, 246, 0));
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 7px 0 rgba(193, 192, 192, 0.259);
-  border-top: 3px solid rgb(255, 255, 255);
-  border-left: 3px solid rgb(255, 255, 255);
-  border-radius: 20px;
-}
+
 
 .section-title {
-  font-family: $font-3;
-  font-size: 2rem;
+  width: max-content;
+  font-family: $font-2;
+  font-size: 2.7rem;
   margin-bottom: 18px;
-  color: white;
-  letter-spacing: 2px;
+  color: $color-3;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.1rem;
+  }
+
+  &:hover {
+    text-shadow: 0 0 160px $color-3;
+  }
+}
+
+em {
+  color: $color-3;
+  font-weight: 500;
 }
 
 .link {
   padding: 10px 20px;
   border: 1px solid white;
   background: none;
-  color: white !important;
+  color: white;
+
+  @media screen and (max-width: 768px) {
+    padding: 7px 15px;
+  }
+
+  &:hover {
+    border: 1px solid rgb(32, 128, 227);
+    box-shadow: 0 0px 10px rgba(32, 129, 227, 0.7);
+  }
 }

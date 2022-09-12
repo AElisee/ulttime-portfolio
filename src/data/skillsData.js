@@ -1,59 +1,59 @@
-export const skills = {
-  main: [
-    {
-      name: "Html",
-      icon: "./icons/html.svg",
-    },
-    {
-      name: "Css",
-      icon: "./icons/css.svg",
-    },
-    {
-      name: "JavaScript",
-      icon: "./icons/js.svg",
-    },
-    {
-      name: "ReactJs & Redux",
-      icon: "./icons/react.png",
-      icon_2: "./icons/redux.svg",
-    },
-    {
-      name: "Sass",
-      icon: "./icons/sass.svg",
-    },
-    {
-      name: "Bootstrap",
-      icon: "./icons/bootstrap.svg",
-    },
-  ],
-  other: [
-    {
-      name: "Seo",
-      icon: "",
-    },
-    {
-      name: "Base de Données",
-      icon: "",
-    },
-    {
-      name: "Nodejs",
-      icon: "",
-    },
-    {
-      name: "Express",
-      icon: "",
-    },
-    {
-      name: "MongoDB",
-      icon: "",
-    },
-    {
-      name: "Api",
-      icon: "",
-    },
-    {
-      name: "Git & Github",
-      icon: "",
-    },
-  ],
-};
+export const skills = [
+  {
+    name: "JavaScript",
+    icon: "./icons/js.svg",
+  },
+  {
+    name: "ReactJs",
+    icon: "./icons/react.png",
+  },
+  {
+    name: "Redux",
+    icon: "./icons/redux.svg",
+  },
+  {
+    name: "Html",
+    icon: "./icons/html.svg",
+  },
+  {
+    name: "Css",
+    icon: "./icons/css.svg",
+  },
+  {
+    name: "Sass",
+    icon: "./icons/sass.svg",
+  },
+  {
+    name: "Bootstrap",
+    icon: "./icons/bootstrap.svg",
+  },
+  {
+    name: "Seo",
+    icon: "./icons/seo.svg",
+  },
+  {
+    name: "Base de Données",
+    icon: "./icons/database.svg",
+  },
+  {
+    name: "Nodejs",
+    icon: "./icons/node.svg",
+  },
+  {
+    name: "ExpressJs",
+    icon: "./icons/expressjs.svg",
+  },
+  {
+    name: "MongoDB",
+    icon: "./icons/mongodb.svg",
+  },
+  {
+    name: "Api",
+    icon: "./icons/api.svg",
+  },
+  {
+    name: "Git & Github",
+    icon: "./icons/git.svg",
+    icon_2: "./icons/github.svg",
+  },
+];

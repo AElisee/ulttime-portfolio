@@ -23,8 +23,8 @@ const Card1 = ({ skill }) => {
       animate="visible"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.5 }}
-      whileHover={{ scale: 1.05, rotate: 2 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ scale: 1.05, rotate: 0.5 }}
     >
       <div className="container">
         <div className="icon-container">
