@@ -10,7 +10,7 @@ const Projects = () => {
       <div className="projects">
         <Navigation />
         <div className="projects-container">
-          <h3 className="section-title">Projects</h3>
+          <h3 className="section-title">Projets</h3>
           <div className="projects-cards">
             {projectsData &&
               projectsData.projects.map((project, index) => (

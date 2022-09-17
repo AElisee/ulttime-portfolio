@@ -18,7 +18,7 @@
     >p {
       color: $color-4;
       font-family: $font-2;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
   }
@@ -153,6 +153,7 @@
 
           p {
             padding: 3px;
+            font-size: 0.9rem;
           }
 
           .email,
@@ -171,7 +172,6 @@
               content: url(../../../public/icons/clipboard-copy.svg);
               right: -30px;
               top: 0;
-              filter: invert(100%);
             }
           }
         }
@@ -218,5 +218,7 @@
       }
     }
   }
+
+
 
 }

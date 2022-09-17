@@ -68,19 +68,25 @@ const ContactForm = () => {
           <textarea name="message" id="mess" placeholder="Votre message..." />
         </div>
         <div className="submit-container">
-          <input type="submit" value="Envoyer" className="submit-btn" />
+          <input type="submit" value="Envoyer" className="submit-btn hover" />
         </div>
       </form>
       <div className="formMessage"></div>
       <div className="address">
         <p>Abidjan, Côte d'Ivoire</p>
         <CopyToClipboard text="2kange.eli@gmail.com">
-          <p className="email" onClick={() => alert("Email copié")}>
+          <p
+            className="email hover"
+            onClick={() => alert("L'Email a bien été copié")}
+          >
             2kange.eli@gmail.com
           </p>
         </CopyToClipboard>
         <CopyToClipboard text="0789141381">
-          <p className="phone" onClick={() => alert("Téléphone copié")}>
+          <p
+            className="phone hover"
+            onClick={() => alert("Le téléphone a bien été copié")}
+          >
             +225 07 891 413 81
           </p>
         </CopyToClipboard>

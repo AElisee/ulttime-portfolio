@@ -14,6 +14,7 @@ const AboutModal = () => {
           Présentation
         </button>
         <button
+          id="statut"
           className={!presentation ? "btn-active" : ""}
           onClick={() => setPresentation(false)}
         >
@@ -23,12 +24,12 @@ const AboutModal = () => {
       {presentation ? <Presentaton /> : <Statut />}
       <div className="donwload-cv">
         <a
-          className="link"
-          href="./css.pdf"
+          className="link hover"
+          href="./CV_ANGE_KOUASSI.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Télécharger CV{" "}
+          Télécharger CV
           <img
             src="./icons/file-text.svg"
             alt=""

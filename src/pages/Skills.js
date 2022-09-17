@@ -24,12 +24,12 @@ const Skills = () => {
 
     {
       lang: "Javascript",
-      percentage: "70",
+      percentage: "72",
     },
 
     {
       lang: "ReactJs",
-      percentage: "70",
+      percentage: "72",
     },
   ];
 
@@ -41,20 +41,15 @@ const Skills = () => {
           <div>
             <div className="text-content">
               <h3 className="section-title">Mes compétences</h3>
-              {/* <p>
-                Les technologies et langages dont je fais mention ici sont ceux
-                dans lesquels j'ai une très bonne connaissance et dont je
-                maîtrise bien...
-              </p> */}
               <p>
-                Bien vrai que j'aie une bonne connaissance du Back-end avec
-                Node.js, ExpressJs, MongoDB, ET FireStore. Je suis passionné par
-                le dévéloppement front-end
+                Passionné par le dévéloppement front-end, j'ai également une
+                assez bonne connaissance du Back-end notamment en Node.js,
+                Expressjs, MongoDB, FireStore...
               </p>
             </div>
             <div className="skill-level">
               <div>
-                <h3>Quelques niveaux de compétences</h3>
+                <h3>Top 5 niveaux de compétences</h3>
                 <ul>
                   {levels.map((level, index) => (
                     <li key={index}>

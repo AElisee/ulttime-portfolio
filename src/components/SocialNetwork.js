@@ -18,29 +18,19 @@ const SocialNetwork = () => {
   return (
     <div className="social-network">
       <ul>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          onMouseOver={anim}
-        >
-          <i className="fa-brands fa-facebook"></i>
+        <a href="#" rel="noopener noreferrer" onMouseOver={anim}>
+          <i className="fa-brands fa-facebook hover"></i>
         </a>
         <a
-          href="http://"
+          href="https://www.linkedin.com/in/ange-%C3%A9lis%C3%A9e-kouassi-3b7418231/"
           target="_blank"
           rel="noopener noreferrer"
           onMouseOver={anim}
         >
-          <i className="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin hover"></i>
         </a>
-        <a
-          href="http://"
-          target="_blank"
-          rel="noopener noreferrer"
-          onMouseOver={anim}
-        >
-          <i className="fa-brands fa-github"></i>
+        <a href="#" rel="noopener noreferrer" onMouseOver={anim}>
+          <i className="fa-brands fa-github hover"></i>
         </a>
       </ul>
     </div>

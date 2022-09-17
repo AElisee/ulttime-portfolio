@@ -37,7 +37,7 @@ const Navigation = () => {
       <div>
         <nav>
           <div
-            className="menu"
+            className="menu hover"
             onClick={() => {
               setIsClose(false);
             }}
@@ -61,7 +61,7 @@ const Navigation = () => {
                 setIsClose(true);
               }}
             >
-              <img src="./icons/caret-left.svg" alt="" />
+              <img src="./icons/arrow-left.svg" alt="" />
             </span>
 
             <div className="profile">
@@ -77,7 +77,7 @@ const Navigation = () => {
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
               <img src="./icons/home-2.svg" alt="home-icon" />
-              <span>Accueil</span>
+              <span className="hover">Accueil</span>
             </NavLink>
           </li>
           <li>
@@ -86,7 +86,7 @@ const Navigation = () => {
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
               <img src="./icons/file-text.svg" alt="file-text-icon" />
-              <span>A propos</span>
+              <span className="hover">A propos</span>
             </NavLink>
           </li>
           <li>
@@ -95,7 +95,7 @@ const Navigation = () => {
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
               <img src="./icons/adjustments.svg" alt="tool-icon" />
-              <span>Compétences</span>
+              <span className="hover">Compétences</span>
             </NavLink>
           </li>
           <li>
@@ -104,7 +104,7 @@ const Navigation = () => {
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
               <img src="./icons/briefcase.svg" alt="briefcase-icon" />
-              <span>Projets</span>
+              <span className="hover">Projets</span>
             </NavLink>
           </li>
           <li>
@@ -113,7 +113,7 @@ const Navigation = () => {
               className={(nav) => (nav.isActive ? "nav-active" : null)}
             >
               <img src="./icons/address-book.svg" alt="contact-icon" />
-              <span>Contacts</span>
+              <span className="hover">Contacts</span>
             </NavLink>
           </li>
         </ul>

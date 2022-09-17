@@ -8,8 +8,8 @@ const Statut = () => {
           <div className="content">
             <span>Statut de travail actuel</span>
             <p>
-              Je suis à la recherche d'un stage de perfectionnement ou d'un
-              emploi direct au post de développeur front-end (ReactJs)
+              Je suis à la recherche d'un stage ou d'un emploi direct au post de
+              développeur front-end (ReactJs)
             </p>
           </div>
         </div>

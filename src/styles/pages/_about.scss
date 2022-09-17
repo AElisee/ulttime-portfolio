@@ -4,11 +4,13 @@
   padding: 65px 0;
   background-color: $color-2;
 
+
   .about-container {
     width: 1100px;
     max-width: 90%;
     min-height: 100%;
     margin: 35px auto;
+
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -48,9 +50,37 @@
           font-size: 1rem;
           color: $color-4;
           opacity: 0.7;
+        }
 
+        #statut {
+          position: relative;
 
+          &::before {
+            position: absolute;
+            content: "";
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 100px;
+            background: $color-3;
+            filter: brightness(135%);
+            animation: animcircle 1.5s ease-in-out infinite;
+          }
 
+          @keyframes animcircle {
+            10% {
+              opacity: 0.1;
+              transform: translateY(-50%);
+            }
+
+            100% {
+              opacity: 1;
+              transform: scale(1.1);
+              transform: translateY(-50%);
+            }
+          }
         }
 
         button.btn-active {
@@ -75,11 +105,11 @@
       .presentation {
         margin: 20px;
         font-family: $font-1;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: $color-4;
 
         @media screen and (max-width: 768px) {
-          font-size: 1.1rem;
+          font-size: 1rem;
           margin: 15px 5px;
         }
 
@@ -116,17 +146,21 @@
         @include simple-center;
         padding: 20px 0 40px;
         color: white;
+
+        a {
+          padding: 5px 10px;
+        }
       }
 
       .statut {
         padding: 30px;
         @include simple-center;
-        font-family: $font-1;
-        font-size: 1.2rem;
+        font-family: $font-2;
+        font-size: 1.1rem;
         color: $color-4;
 
         @media screen and (max-width: 768px) {
-          font-size: 1.1rem;
+          font-size: 1rem;
         }
 
         .statut-container {
@@ -170,4 +204,6 @@
       }
     }
   }
+
+
 }

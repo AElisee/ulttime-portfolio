@@ -14,21 +14,21 @@ const Header = () => {
             <h1>
               <span>
                 Bienvenue ! <br /> Je suis Ange Kouassi
-              </span>{" "}
-              Développeur Web{" "}
+              </span>
+              Développeur Web
             </h1>
             <div className="desc">
               <span>Développeur Front-end</span>
             </div>
             <div className="contact-btn">
-              <NavLink to="/contacts" className="link">
+              <NavLink to="/contacts" className="link hover">
                 Contactez-moi !
               </NavLink>
             </div>
           </div>
         </div>
         <span className="scroll-indicator">
-          <img src="./icons/arrow-move-down.svg" alt="arrow-move-down" />
+          <img src="./icons/arrow-down-circle.svg" alt="arrow" />
         </span>
       </div>
     </header>

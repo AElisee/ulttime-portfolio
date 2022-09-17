@@ -3,7 +3,7 @@ import React from "react";
 const ProjectCard = ({ project }) => {
   return (
     <div className="card">
-      <div className="img-container">
+      <div className="img-container hover">
         <img src={project.img} alt="" />
         <div className="view">
           <a href={project.demo_link} target="_blank" rel="noopener noreferrer">
@@ -18,9 +18,10 @@ const ProjectCard = ({ project }) => {
             {project.languages.length > 0 &&
               project.languages.map((language, index) => {
                 return (
-                  <li key={index}>
-                    {language} <span>|</span>
-                  </li>
+                  <>
+                    <li key={index}> {language}</li>
+                    <span>, </span>
+                  </>
                 );
               })}
           </ul>

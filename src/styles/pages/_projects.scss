@@ -17,23 +17,29 @@
       justify-content: center;
       padding: 30px 0 10px;
 
+
       .card {
         flex: 1 0 16%;
-        width: 310px;
-        min-width: 310px;
-        max-width: 310px;
-        height: 310px;
-        margin: 3px;
-        background: $color-4;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.761);
+        width: 320px;
+        min-width: 320px;
+        max-width: 320px;
+        height: 320px;
+        margin: 7px;
+        margin-bottom: 25px;
+        background: $color-2;
         display: grid;
-        grid-template-rows: 80% 20%;
+        grid-template-rows: 79% 21%;
+
+
 
         .img-container {
           position: relative;
           @include simple-center;
           overflow: hidden;
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.761);
+          border-radius: 25px;
+
+
 
           &:hover {
             .view {
@@ -41,16 +47,16 @@
             }
           }
 
-
           img {
-            overflow: hidden;
+            overflow: cover;
             object-fit: cover;
-            object-position: 0%;
+            // object-position: 100%;
             width: 100%;
             height: 100%;
             position: relative;
             transition: 400ms ease-out;
             position: relative;
+
 
 
             &:hover,
@@ -104,26 +110,42 @@
 
         .app-name {
           text-transform: capitalize;
+          font-family: $font-1;
+          letter-spacing: 1px;
           color: $color-3;
           padding: 0;
-          margin-bottom: 3px;
+          margin-top: 10px;
         }
 
         .languages {
           display: flex;
-          align-items: center;
+          align-items: flex-end;
 
           ul {
             li {
-              margin-right: 5px;
+              margin-left: 5px;
               font-size: 1.1rem;
               text-transform: capitalize;
+              padding-left: 2px;
+
+              &:nth-child(1) {
+                margin-left: 0;
+              }
 
             }
 
+            span {
+              padding: 0 0 3px;
+
+              &:nth-last-child(1) {
+                display: none;
+              }
+            }
           }
         }
       }
     }
   }
+
+
 }

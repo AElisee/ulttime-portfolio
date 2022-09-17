@@ -27,7 +27,7 @@ const Contact = () => {
               width="800"
               height="600"
               style={{ border: 0 }}
-              allowSullScreen=""
+              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

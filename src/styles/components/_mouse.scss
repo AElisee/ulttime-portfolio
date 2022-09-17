@@ -9,14 +9,20 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     border-radius: 150px;
     z-index: 2000;
-    background: rgba(255, 223, 220, 0.419);
-    border: 1px solid salmon;
-    transition: 0.1s ease;
+    background: rgba(255, 254, 254, 0.091);
+    transition: 0.17s ease-in-out;
     pointer-events: none;
+
+    &.hovered {
+      width: 30px;
+      height: 30px;
+      background: rgba(255, 254, 254, 0.091);
+      ;
+    }
   }
 
   .circle-minus {
@@ -28,7 +34,7 @@
     z-index: 2000;
     background-color: red;
     border-radius: 150px;
-    transition: 0.12s ease;
+    transition: 0.15s ease-in-out;
     pointer-events: none;
 
   }

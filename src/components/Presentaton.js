@@ -29,7 +29,7 @@ const Presentaton = () => {
           <p>
             <span>
               <img src="./icons/award.svg" alt="" />- Je suis titulaire d'une{" "}
-              <em>LICENCE</em> en informatique et science du numérique
+              <em>LICENCE</em> en informatique et sciences du numérique
             </span>
           </p>
           <span className="mgl">Spécialité bases de données.</span>

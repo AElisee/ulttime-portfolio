@@ -1,64 +1,41 @@
 export const projectsData = {
   projects: [
     {
-      name: "cooking App",
-      date: " Sept 2022",
-      img: "./img-0.jpg",
-      languages: ["react", "sass"],
-      demo_link: "https://google.com",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
+      name: "Movies App",
+      img: "./img/alien.jpg",
+      languages: ["React", "Redux", "sass", "Rest Api"],
+      demo_link: "https://aelisee-moivieapp.netlify.app",
     },
     {
-      name: "React cine App",
-      date: " Août 2022",
-      img: "./cine-app.jpg",
-      languages: ["react", "sass"],
-      demo_link: "https://aelisee-cine-app.netlify.app",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
+      name: "Cooking App",
+      img: "./img/cooking.jpg",
+      languages: ["React", "Redux", "sass", "Rest Api"],
+      demo_link: "https://aelisee-cookingapp.netlify.app/",
     },
     {
-      name: "cooking App",
-      date: " Sept 2022",
-      img: "./cooking-app.jpg",
-      languages: ["react", "sass"],
-      demo_link: "https://aelisee-cooking-app.netlify.app",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
+      name: "Elisha Forum",
+      img: "./img/elisha_forum.jpg",
+      languages: ["React", "Redux", "sass", "FireStore"],
+      demo_link: "https://aelisee-elishaforum.netlify.app",
+    },
+
+    {
+      name: "Watch Tower",
+      img: "./img/crypto.jpg",
+      languages: ["React", "Redux", "sass", "Rest Api"],
+      demo_link: "https://aelisse-cryptowatch.netlify.app",
     },
     {
-      name: "cooking App",
-      date: " Sept 2022",
-      img: "",
-      languages: ["react", "sass", "Api"],
-      demo_link: "https://google.com",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
+      name: 'Intégration "The resto"',
+      img: "./img/the_resto.jpg",
+      languages: ["html", "sass"],
+      demo_link: "https://aelisee-leresto.netlify.app",
     },
     {
-      name: "cooking App",
-      date: " Sept 2022",
-      img: "",
-      languages: ["react", "sass", "Api"],
-      demo_link: "https://google.com",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
-    },
-    {
-      name: "cooking App",
-      date: " Sept 2022",
-      img: "",
-      languages: ["react", "sass", "Api"],
-      demo_link: "https://google.com",
-      github: "https://google.com",
-      description:
-        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aliqu numquam non eos consectetur doloremque impedit atque maxime libero aspernatur.",
+      name: "Clone Gaming campus",
+      img: "./img/gaming_campus.jpg",
+      languages: ["html", "css"],
+      demo_link: "https://aelisee-gamingcampus.netlify.app",
     },
   ],
 };
